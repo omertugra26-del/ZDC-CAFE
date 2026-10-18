@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZDC Café & Patisserie | Seydişehir</title>
+  <meta name="description" content="ZDC Café & Patisserie — Kahve, tatlı ve güzel anların buluşma noktası.">
+  <style>
+    :root {
+      --cream: #f8f3eb;
+      --brown: #4b3027;
+      --coffee: #87634e;
+      --gold: #c6a36a;
+      --white: #fffdf9;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--brown);
+      line-height: 1.7;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 7%;
+      background: var(--white);
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+
+    nav a {
+      color: var(--brown);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(35,22,17,.82), rgba(35,22,17,.18)),
+        url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content { max-width: 620px; }
+
+    .eyebrow {
+      color: #e8c98f;
+      letter-spacing: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.12;
+      margin: 18px 0;
+      font-weight: normal;
+    }
+
+    .hero p { max-width: 480px; font-size: 17px; }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 23px;
+      background: var(--gold);
+      color: #302018;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+
+    section { padding: 75px 8%; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-title span {
+      color: var(--coffee);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(29px, 4vw, 42px);
+      font-weight: normal;
+      margin-top: 8px;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      padding-bottom: 22px;
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: normal;
+      padding: 18px 20px 4px;
+    }
+
+    .card p { padding: 0 20px; color: #76645a; font-size: 14px; }
+
+    .about {
+      background: #eee3d5;
+      text-align: center;
+    }
+
+    .about p { max-width: 700px; margin: 18px auto 0; }
+
+    .contact {
+      background: var(--brown);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact p { margin-top: 10px; }
+
+    footer {
+      padding: 22px;
+      text-align: center;
+      font-size: 13px;
+      background: #35231d;
+      color: #eee3d5;
+    }
+
+    @media (max-width: 700px) {
+      header { flex-direction: column; padding: 18px 5%; }
+      nav { justify-content: center; gap: 14px; }
+      .hero { min-height: 490px; padding: 55px 7%; }
+      .hero p { font-size: 15px; }
+      section { padding: 55px 6%; }
+      .cards { grid-template-columns: 1fr; }
+      .card img { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ZDC <span style="color:#b18b58">CAFÉ</span></div>
+    <nav>
+      <a href="#hikayemiz">Hikâyemiz</a>
+      <a href="#lezzetler">Lezzetlerimiz</a>
+      <a href="#mekan">Mekânımız</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Zarafet, kahve ve tatlı bir mola</div>
+        <h1>Güzel anlar, güzel lezzetlerle başlar.</h1>
+        <p>Özenle hazırlanan kahveler, nefis tatlılar ve kendinize ayıracağınız sıcacık bir mola.</p>
+        <a class="button" href="#lezzetler">LEZZETLERİMİZİ KEŞFEDİN ↗</a>
+      </div>
+    </section>
+
+    <section id="hikayemiz">
+      <div class="section-title">
+        <span>Bizim hikâyemiz</span>
+        <h2>Her fincanda küçük bir mutluluk</h2>
+      </div>
+      <p class="intro">
+        ZDC Café & Patisserie, kahvenin kokusunu taze tatlıların mutluluğuyla
+        buluşturan sıcak bir mekân hayaliyle yola çıktı. Burada her mola,
+        kendinize ayırdığınız güzel bir ana dönüşür.
+      </p>
+    </section>
+
+    <section id="lezzetler">
+      <div class="section-title">
+        <span>Özenle hazırlanan</span>
+        <h2>Favori lezzetlerimiz</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Taze hazırlanmış kahve">
+          <h3>Nitelikli Kahveler</h3>
+          <p>Günün her saatine eşlik eden kahve keyfi.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Çikolatalı pasta">
+          <h3>Özel Tatlılar</h3>
+          <p>Görünümüyle büyüleyen, tadıyla mutlu eden lezzetler.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Taze fırınlanmış kruvasan">
+          <h3>Fırından Tazelik</h3>
+          <p>Gününüzü güzelleştiren taptaze eşlikçiler.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="mekan">
+      <div class="section-title">
+        <span>Kendinize bir mola verin</span>
+        <h2>Sade, sıcak, samimi</h2>
+      </div>
+      <p>
+        Dost sohbetleri, küçük kutlamalar veya yalnızca kahvenizi yudumlayacağınız
+        sakin bir an… ZDC Café'de her güzel anın yeri var.
+      </p>
+    </section>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZDC Café & Patisserie | Seydişehir</title>
+  <meta name="description" content="ZDC Café & Patisserie — Kahve, tatlı ve güzel anların buluşma noktası.">
+  <style>
+    :root {
+      --cream: #f8f3eb;
+      --brown: #4b3027;
+      --coffee: #87634e;
+      --gold: #c6a36a;
+      --white: #fffdf9;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--brown);
+      line-height: 1.7;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 7%;
+      background: var(--white);
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+
+    nav a {
+      color: var(--brown);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(35,22,17,.82), rgba(35,22,17,.18)),
+        url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content { max-width: 620px; }
+
+    .eyebrow {
+      color: #e8c98f;
+      letter-spacing: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.12;
+      margin: 18px 0;
+      font-weight: normal;
+    }
+
+    .hero p { max-width: 480px; font-size: 17px; }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 23px;
+      background: var(--gold);
+      color: #302018;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+
+    section { padding: 75px 8%; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-title span {
+      color: var(--coffee);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(29px, 4vw, 42px);
+      font-weight: normal;
+      margin-top: 8px;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      padding-bottom: 22px;
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: normal;
+      padding: 18px 20px 4px;
+    }
+
+    .card p { padding: 0 20px; color: #76645a; font-size: 14px; }
+
+    .about {
+      background: #eee3d5;
+      text-align: center;
+    }
+
+    .about p { max-width: 700px; margin: 18px auto 0; }
+
+    .contact {
+      background: var(--brown);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact p { margin-top: 10px; }
+
+    footer {
+      padding: 22px;
+      text-align: center;
+      font-size: 13px;
+      background: #35231d;
+      color: #eee3d5;
+    }
+
+    @media (max-width: 700px) {
+      header { flex-direction: column; padding: 18px 5%; }
+      nav { justify-content: center; gap: 14px; }
+      .hero { min-height: 490px; padding: 55px 7%; }
+      .hero p { font-size: 15px; }
+      section { padding: 55px 6%; }
+      .cards { grid-template-columns: 1fr; }
+      .card img { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ZDC <span style="color:#b18b58">CAFÉ</span></div>
+    <nav>
+      <a href="#hikayemiz">Hikâyemiz</a>
+      <a href="#lezzetler">Lezzetlerimiz</a>
+      <a href="#mekan">Mekânımız</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Zarafet, kahve ve tatlı bir mola</div>
+        <h1>Güzel anlar, güzel lezzetlerle başlar.</h1>
+        <p>Özenle hazırlanan kahveler, nefis tatlılar ve kendinize ayıracağınız sıcacık bir mola.</p>
+        <a class="button" href="#lezzetler">LEZZETLERİMİZİ KEŞFEDİN ↗</a>
+      </div>
+    </section>
+
+    <section id="hikayemiz">
+      <div class="section-title">
+        <span>Bizim hikâyemiz</span>
+        <h2>Her fincanda küçük bir mutluluk</h2>
+      </div>
+      <p class="intro">
+        ZDC Café & Patisserie, kahvenin kokusunu taze tatlıların mutluluğuyla
+        buluşturan sıcak bir mekân hayaliyle yola çıktı. Burada her mola,
+        kendinize ayırdığınız güzel bir ana dönüşür.
+      </p>
+    </section>
+
+    <section id="lezzetler">
+      <div class="section-title">
+        <span>Özenle hazırlanan</span>
+        <h2>Favori lezzetlerimiz</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Taze hazırlanmış kahve">
+          <h3>Nitelikli Kahveler</h3>
+          <p>Günün her saatine eşlik eden kahve keyfi.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Çikolatalı pasta">
+          <h3>Özel Tatlılar</h3>
+          <p>Görünümüyle büyüleyen, tadıyla mutlu eden lezzetler.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Taze fırınlanmış kruvasan">
+          <h3>Fırından Tazelik</h3>
+          <p>Gününüzü güzelleştiren taptaze eşlikçiler.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="mekan">
+      <div class="section-title">
+        <span>Kendinize bir mola verin</span>
+        <h2>Sade, sıcak, samimi</h2>
+      </div>
+      <p>
+        Dost sohbetleri, küçük kutlamalar veya yalnızca kahvenizi yudumlayacağınız
+        sakin bir an… ZDC Café'de her güzel anın yeri var.
+      </p>
+    </section>
+
+    <section class="contact" id="iletisim">
+      <div class="section-title">
+        <span>Bizi ziyaret edin</span>
+        <h2>Bir kahveye bekleriz.</h2>
+      </div>
+      <p>Konum: Seydişehir, Konya</p>
+      <p>Telefon ve sosyal medya bilgilerimiz yakında burada olacak.</p>
+      <a class="button" href="https://www.google.com/maps/search/?api=1&query=Seydi%C5%9Fehir+Konya">KONUMU GÖR ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 ZDC Café & Patisserie · Tüm hakları saklıdır.
+  </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZDC Café & Patisserie | Seydişehir</title>
+  <meta name="description" content="ZDC Café & Patisserie — Kahve, tatlı ve güzel anların buluşma noktası.">
+  <style>
+    :root {
+      --cream: #f8f3eb;
+      --brown: #4b3027;
+      --coffee: #87634e;
+      --gold: #c6a36a;
+      --white: #fffdf9;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--brown);
+      line-height: 1.7;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 7%;
+      background: var(--white);
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+
+    nav a {
+      color: var(--brown);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      padding: 70px 8%;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(35,22,17,.82), rgba(35,22,17,.18)),
+        url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content { max-width: 620px; }
+
+    .eyebrow {
+      color: #e8c98f;
+      letter-spacing: 4px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.12;
+      margin: 18px 0;
+      font-weight: normal;
+    }
+
+    .hero p { max-width: 480px; font-size: 17px; }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 23px;
+      background: var(--gold);
+      color: #302018;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+
+    section { padding: 75px 8%; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-title span {
+      color: var(--coffee);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(29px, 4vw, 42px);
+      font-weight: normal;
+      margin-top: 8px;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      padding-bottom: 22px;
+    }
+
+    .card img {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: normal;
+      padding: 18px 20px 4px;
+    }
+
+    .card p { padding: 0 20px; color: #76645a; font-size: 14px; }
+
+    .about {
+      background: #eee3d5;
+      text-align: center;
+    }
+
+    .about p { max-width: 700px; margin: 18px auto 0; }
+
+    .contact {
+      background: var(--brown);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact p { margin-top: 10px; }
+
+    footer {
+      padding: 22px;
+      text-align: center;
+      font-size: 13px;
+      background: #35231d;
+      color: #eee3d5;
+    }
+
+    @media (max-width: 700px) {
+      header { flex-direction: column; padding: 18px 5%; }
+      nav { justify-content: center; gap: 14px; }
+      .hero { min-height: 490px; padding: 55px 7%; }
+      .hero p { font-size: 15px; }
+      section { padding: 55px 6%; }
+      .cards { grid-template-columns: 1fr; }
+      .card img { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">ZDC <span style="color:#b18b58">CAFÉ</span></div>
+    <nav>
+      <a href="#hikayemiz">Hikâyemiz</a>
+      <a href="#lezzetler">Lezzetlerimiz</a>
+      <a href="#mekan">Mekânımız</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Zarafet, kahve ve tatlı bir mola</div>
+        <h1>Güzel anlar, güzel lezzetlerle başlar.</h1>
+        <p>Özenle hazırlanan kahveler, nefis tatlılar ve kendinize ayıracağınız sıcacık bir mola.</p>
+        <a class="button" href="#lezzetler">LEZZETLERİMİZİ KEŞFEDİN ↗</a>
+      </div>
+    </section>
+
+    <section id="hikayemiz">
+      <div class="section-title">
+        <span>Bizim hikâyemiz</span>
+        <h2>Her fincanda küçük bir mutluluk</h2>
+      </div>
+      <p class="intro">
+        ZDC Café & Patisserie, kahvenin kokusunu taze tatlıların mutluluğuyla
+        buluşturan sıcak bir mekân hayaliyle yola çıktı. Burada her mola,
+        kendinize ayırdığınız güzel bir ana dönüşür.
+      </p>
+    </section>
+
+    <section id="lezzetler">
+      <div class="section-title">
+        <span>Özenle hazırlanan</span>
+        <h2>Favori lezzetlerimiz</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Taze hazırlanmış kahve">
+          <h3>Nitelikli Kahveler</h3>
+          <p>Günün her saatine eşlik eden kahve keyfi.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Çikolatalı pasta">
+          <h3>Özel Tatlılar</h3>
+          <p>Görünümüyle büyüleyen, tadıyla mutlu eden lezzetler.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Taze fırınlanmış kruvasan">
+          <h3>Fırından Tazelik</h3>
+          <p>Gününüzü güzelleştiren taptaze eşlikçiler.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="mekan">
+      <div class="section-title">
+        <span>Kendinize bir mola verin</span>
+        <h2>Sade, sıcak, samimi</h2>
+      </div>
+      <p>
+        Dost sohbetleri, küçük kutlamalar veya yalnızca kahvenizi yudumlayacağınız
+        sakin bir an… ZDC Café'de her güzel anın yeri var.
+      </p>
+    </section>
+
+    <section class="contact" id="iletisim">
+      <div class="section-title">
+        <span>Bizi ziyaret edin</span>
+        <h2>Bir kahveye bekleriz.</h2>
+      </div>
+      <p>Konum: Seydişehir, Konya</p>
+      <p>Telefon ve sosyal medya bilgilerimiz yakında burada olacak.</p>
+      <a class="button" href="https://www.google.com/maps/search/?api=1&query=Seydi%C5%9Fehir+Konya">KONUMU GÖR ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 ZDC Café & Patisserie · Tüm hakları saklıdır.
+  </footer>
+</body>
+</html>
+
+    <section class="contact" id="iletisim">
+      <div class="section-title">
+        <span>Bizi ziyaret edin</span>
+        <h2>Bir kahveye bekleriz.</h2>
+      </div>
+      <p>Konum: Seydişehir, Konya</p>
+      <p>Telefon ve sosyal medya bilgilerimiz yakında burada olacak.</p>
+      <a class="button" href="https://www.google.com/maps/search/?api=1&query=Seydi%C5%9Fehir+Konya">KONUMU GÖR ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 ZDC Café & Patisserie · Tüm hakları saklıdır.
+  </footer>
+</body>
+</html>
